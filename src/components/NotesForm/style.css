@@ -1,0 +1,21 @@
+.notes-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin: 0px auto;
+    align-items: center;
+}
+
+.notes-input, .notes-textarea, .notes-form-button{
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #d1d1d1;
+    border: 0px;
+    max-width: 500px;
+    min-width: 400px;
+}
+
+.notes-input:hover, .notes-input:focus-visible , .notes-textarea:active, .notes-form-button:active{
+    border: 0px solid rgb(122, 122, 122);
+
+}

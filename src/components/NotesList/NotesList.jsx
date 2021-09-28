@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import NoteCard from "./NoteCard";
+import NoteCard from "../NoteCard";
+import "./style.css"
 
 class NotesList extends Component{
     render(){
         return(
-            <ul>
+            <ul className="note-list">
                 {
-                    Array.of("Trabalho", "Trabalho", "Estudo", "Casa").map(categoria => {
+                    Array.of("Trabalho", "Trabalho", "Estudo", "Casa").map((categoria, index) => {
                         return(
-                            <li>
+                            <li className="note-list-item" key={index}>
                                 <div>{categoria}</div>
                                 <NoteCard />
                             </li>
