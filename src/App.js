@@ -7,16 +7,18 @@ class App extends Component {
 
   constructor(){
     super();
-    this.notes = [];
+    this.state = {
+      notes:[]
+    }
   }
 
   createNote(title, text){
-    const newNote = {
-      title, 
-      text
+    const newNote = { title, text };
+    const newNotesArray = [...this.state.notes, newNote]
+    const newState = {
+      notes:newNotesArray
     }
-    this.notes.push(newNote)
-    console.log(this.notes.length)
+    this.setState(newState)
   }
 
   render(){
@@ -24,7 +26,7 @@ class App extends Component {
       <div className="App">
         <h1 className="notes-main-title">Your Note List</h1>
         <NotesForm createNote={this.createNote.bind(this)} />
-        <NotesList notes={this.notes}/>
+        <NotesList notes={this.state.notes}/>
       </div>
     );
   }

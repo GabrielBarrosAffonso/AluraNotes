@@ -5,13 +5,13 @@ class NotesForm extends Component{
 
     constructor(props){
         super(props);
-        this.titulo="";
+        this.title="";
         this.text=""
     };
 
     handleChangeTitle(event){
         event.stopPropagation();
-        this.titulo = event.target.value
+        this.title = event.target.value
     }
 
     handleChangeText(event){
