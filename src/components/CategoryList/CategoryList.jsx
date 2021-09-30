@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import "./style.css"
 
 class CategoryList extends Component{
 
@@ -13,8 +13,9 @@ class CategoryList extends Component{
 
     render(){
         return(
-            <div>
-                <ul>
+            <div className="categories-list">
+                <input className="categories-input" type="text" placeholder="Adicionar Categoria" onKeyUp={this._handleEventInput.bind(this)}/>
+                <ul className="categories-ul">
                     { this.props.categories.map((category, index) => {
                         return(
                             <li className="category-name" key={index}>{category}</li>
@@ -22,7 +23,6 @@ class CategoryList extends Component{
                     })
                     }
                 </ul>
-                <input type="text" placeholder="Adicionar Categoria" onKeyUp={this._handleEventInput.bind(this)}/>
             </div>
         )
     }

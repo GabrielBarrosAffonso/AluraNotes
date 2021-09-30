@@ -1,0 +1,31 @@
+.categories-list{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 9999;
+    background: #fff;
+    box-shadow: 1px 1px 12px #818887;
+    padding: 20px;
+}
+
+.categories-input{
+    height: 35px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    border: 2px solid #bdbdbd;
+    padding: 0px 5px;
+}
+
+.category-name{
+    padding: 10px 5px;
+    margin: 8px 0px;
+    background: #40b7ad;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'PoppinsRegular';
+    cursor: pointer;
+}
