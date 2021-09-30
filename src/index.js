@@ -4,6 +4,12 @@ import './assets/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+//FONTS
+import './assets/fonts/Poppins-Bold.ttf';
+import './assets/fonts/Poppins-Regular.ttf';
+import './assets/fonts/Poppins-Medium.ttf';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

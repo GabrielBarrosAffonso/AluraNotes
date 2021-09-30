@@ -28,6 +28,7 @@ class NotesForm extends Component{
     render(){
         return(
             <form className="notes-form" onSubmit={this.createNote.bind(this)}>
+                <h1 className="notes-main-title">YOUR NOTES LIST</h1>
                 <input className="notes-input" type="text" placeholder="Título" onChange={this.handleChangeTitle.bind(this)}/>
                 <textarea className="notes-textarea" placeholder="Escreva sua Nota" name="" id="" cols="30" rows="10" onChange={this.handleChangeText.bind(this)}></textarea>
                 <button className="notes-form-button">Criar Nota</button>

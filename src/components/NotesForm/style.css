@@ -1,21 +1,51 @@
 .notes-form{
     display: flex;
     flex-direction: column;
-    max-width: 50%;
     margin: 0px auto;
     align-items: center;
+    background-color: #40b7ad;
+    padding: 50px 20px;
 }
 
 .notes-input, .notes-textarea, .notes-form-button{
     margin-top: 10px;
     padding: 5px;
-    background-color: #d1d1d1;
+    width: 100%;
+    max-width: 400px;
+    min-width: 350px;
+    border-radius: 5px;
+    min-height: 25px;
+}
+
+.notes-input, .notes-textarea{
     border: 0px;
-    max-width: 500px;
-    min-width: 400px;
+    background-color: #fff;
+    font-family: "PoppinsRegular";
+}
+
+.notes-form-button{
+    background-color: #ffff;
+    height: 40px;
+    color: #15877e;
+    font-weight: 600;
+    border: 2px solid #239188;
+    box-shadow: 0px 5px 1px #0d8178;
+    font-family: "PoppinsMedium";
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.notes-form-button:hover{
+    background-color: #dbf3f1 ;
 }
 
 .notes-input:hover, .notes-input:focus-visible , .notes-textarea:active, .notes-form-button:active{
     border: 0px solid rgb(122, 122, 122);
+}
 
+.notes-main-title{
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    font-family: "PoppinsBold";
 }

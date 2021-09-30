@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from "react";
 import "./style.css"
-import {ReactComponent as DeleteSVG} from "../../assets/images/deleteIcon.svg"
+import {ReactComponent as DeleteSVG} from "../../assets/images/closeNote.svg"
 // import deleteSVG from "../../assets/images/deleteIcon.svg"
 
-class NoteCard extends React.Component {
+class NoteCard extends Component {
 
     delete(){
         const indexMain = this.props.number
@@ -18,7 +18,7 @@ class NoteCard extends React.Component {
                 </header>
                 <p className="note-card-text">{this.props.text}</p>
                 {/* <img src={deleteSVG} alt="Delete Card" /> */}
-                <DeleteSVG onClick={this.delete.bind(this)}/>
+                <DeleteSVG className="delete-svg" onClick={this.delete.bind(this)}/>
             </section>
         );
     }

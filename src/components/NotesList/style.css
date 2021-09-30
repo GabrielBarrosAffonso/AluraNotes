@@ -1,0 +1,39 @@
+.note-list-item{
+    padding: 15px;
+    max-width: 290px;
+    min-width: 100px;
+    width: 100%;
+    background: #f2f2f2;
+    font-family: 'PoppinsRegular';
+    font-size: 13px;
+    position: relative;
+    border-radius: 10px;
+    margin: 30px 5px;
+    min-height: 100px;
+}
+
+.note-card-title{
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-family: 'PoppinsMedium';
+}
+
+.note-list{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+.delete-svg{
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    height: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.delete-svg:hover{
+    fill: #458c86;
+}
