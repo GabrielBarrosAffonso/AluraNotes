@@ -19,6 +19,7 @@ class NoteCard extends Component {
                 <p className="note-card-text">{this.props.text}</p>
                 {/* <img src={deleteSVG} alt="Delete Card" /> */}
                 <DeleteSVG className="delete-svg" onClick={this.delete.bind(this)}/>
+                <h4>{this.props.category}</h4>
             </section>
         );
     }
