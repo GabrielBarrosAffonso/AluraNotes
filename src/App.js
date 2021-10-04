@@ -41,9 +41,9 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <NotesForm createNote={this.notes.createNote.bind(this.notes)} categories={this.categories.categories} />
+        <NotesForm createNote={this.notes.createNote.bind(this.notes)} categories={this.categories} />
         <CategoryList categories={this.categories} addCategory={this.categories.addCategory.bind(this.categories)}/>
-        <NotesList notes={this.notes.notes} deleteNote={this.notes.deleteNote}/>
+        <NotesList notes={this.notes} deleteNote={this.notes.deleteNote.bind(this.notes)}/>
       </div>
     );
   }

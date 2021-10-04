@@ -8,7 +8,21 @@ class NotesForm extends Component{
         this.title="";
         this.text=""
         this.category="No Category"
+        this.state = {categories:["Categorias"]}
+        this._newCategories = this._newCategories.bind(this)
     };
+
+    componentDidMount(){
+        this.props.categories.subscribe(this._newCategories)
+    }
+
+    componentWillUnmount(){
+        this.props.categories.unsubscribe(this._newCategories)
+    }
+
+    _newCategories(categories){
+        this.setState({...this.state, categories})
+    }
 
     handleChangeTitle(event){
         event.stopPropagation();
@@ -39,7 +53,7 @@ class NotesForm extends Component{
                 <textarea className="notes-textarea" placeholder="Escreva sua Nota" name="" id="" cols="30" rows="10" onChange={this.handleChangeText.bind(this)}></textarea>
                 <select className="notes-category-input notes-input" onChange={this.handleChangeCategory.bind(this)}>
                     <option value="Sem Categoria">Sem Categoria</option>
-                    {this.props.categories.map((category, index) => {
+                    {this.state.categories.map((category, index) => {
                         return(<option key={index} value={category}>{category}</option>)
                     })}
                 </select>
