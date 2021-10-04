@@ -3,9 +3,15 @@ import "./style.css"
 
 class CategoryList extends Component{
 
+    componentDidMount(){
+        this.props.categories.subscribe(this._newCategories.bind(this))
+    }
+
+    _newCategories(categories){
+        console.log(categories)
+    }
     _handleEventInput(e){
         if(e.keyCode === 13){
-            console.log("add Ctegory")
             let categoryValue = e.target.value
             this.props.addCategory(categoryValue)
         }
@@ -16,7 +22,7 @@ class CategoryList extends Component{
             <div className="categories-list">
                 <input className="categories-input" type="text" placeholder="Adicionar Categoria" onKeyUp={this._handleEventInput.bind(this)}/>
                 <ul className="categories-ul">
-                    { this.props.categories.map((category, index) => {
+                    { this.props.categories.categories.map((category, index) => {
                         return(
                             <li className="category-name" key={index}>{category}</li>
                         )
